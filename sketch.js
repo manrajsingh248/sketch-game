@@ -1,6 +1,24 @@
-const container = document.querySelector("#container");
+//query selectors
+const container = document.querySelector('#container');
 
-const div = document.createElement('div');
-div.classList.add('divs');
-div.style.cssText = "background-color: pink; border: 3px solid black;";
-container.appendChild(div);
+
+//Function that creates GRID
+function makeGrid (rows, cols) {
+  container.style.setProperty('--grid-rows', rows);
+  container.style.setProperty('--grid-cols', cols);
+  for (i = 0; i < (rows * cols); i++) {
+    let box = document.createElement("div");
+    box.classList.add('grid-item')
+    container.appendChild(box);
+  };
+}
+
+//grid creationg
+makeGrid(16, 16);
+
+
+
+
+
+
+
