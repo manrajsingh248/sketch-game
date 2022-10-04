@@ -1,8 +1,6 @@
 //query selectors
 const container = document.querySelector('#container');
 
-
-//Function that creates GRID
 function makeGrid (rows, cols) {
   container.style.setProperty('--grid-rows', rows);
   container.style.setProperty('--grid-cols', cols);
@@ -11,14 +9,6 @@ function makeGrid (rows, cols) {
     box.classList.add('grid-item')
     container.appendChild(box);
   };
+  hoverColor();
 }
-
-//grid creationg
-makeGrid(16, 16);
-
-
-
-
-
-
 
