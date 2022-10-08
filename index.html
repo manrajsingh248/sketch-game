@@ -14,18 +14,27 @@
       <div class="content">
         <div class="grid"></div>
         <div class="buttons">
-          <button>Black</button>
-          <button>Blue</button>
-          <button>Random</button>
+          <button onclick="changeColor('black')">Black</button>
+          <button onclick="changeColor('blue')">Blue</button>
+          <button onclick="changeColor('random')">Random</button>
+          <button onclick="changeColor('white')">Eraser</button>
+          <button>Reset</button>
         </div>
         <div>
-          <input type="text" placeholder="Size of Grid" value="16"/>
+          <input 
+          type="text" 
+          placeholder="Size of Grid" 
+          value="16" 
+          onchange= "changeSize(this.value)"
+          />
           <button>Set Size</button>
+          <div id="errorText"><h3> </h3></div>
+
         </div>
       </div>
     </div>
   </body>
-  
+
   <script src="sketch.js" defer></script>
 </html>
 

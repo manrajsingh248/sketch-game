@@ -1,4 +1,38 @@
-:root {
+body {
+  background-color: beige;
+}
+
+
+.grid {
+  width: 600px;
+  height: 600px;
+  display: grid;
+}
+
+#errorText {
+  margin-top: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* :root {
   --grid-cols: 1;
   --grid-rows: 1;
 }
@@ -17,5 +51,5 @@
   padding: 0.5em;
   border: 1px solid #ddd;
   text-align: center;
-}
+} */
 
