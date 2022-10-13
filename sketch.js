@@ -2,6 +2,7 @@ const container = document.querySelector('#container');
 const errorText = document.querySelector("#errorText");
 
 let color = "black";
+let click = true;
 
 function makeGrid(size){
   let grid = document.querySelector('.grid');
@@ -13,7 +14,6 @@ function makeGrid(size){
   for( let i = 0; i < total; i++) {
     let box = document.createElement('div');
     box.addEventListener("mouseover", colorBox);
-    
     box.style.backgroundColor = 'white';
 
     grid.appendChild(box);
@@ -21,6 +21,7 @@ function makeGrid(size){
 }
 
 makeGrid(16);
+
 function changeSize(input) {
   if(input >=2 && input <=100) {
     makeGrid(input);
@@ -40,18 +41,29 @@ function randomColor() {
 }
 
 function colorBox() {
-  if(color == "random") {
-    this.style.backgroundColor = randomColor();
-  }
-  else {
-   this.style.backgroundColor = color;
+  if (click) {
+    if(color == "random") {
+      this.style.backgroundColor = randomColor();
+    }
+    else {
+    this.style.backgroundColor = color;
+    }
   }
 }
 
+function changeColor (choice) {
+  color = choice;
+}
 
+function resetGrid() {
+  let grid = document.querySelector(".grid");
+  let boxes = grid.querySelectorAll("div");
+  boxes.forEach((div) => div.style.backgroundColor = "white");
+}
 
-
-
+document.querySelector('body').addEventListener('click', () => {
+  click = !click;
+});
 
 
 
