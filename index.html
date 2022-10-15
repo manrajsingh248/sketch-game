@@ -4,28 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
     <meta name="viewport" content="width-device-width, inital-scale-1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css"> 
     <title>Page Title</title>
   </head>
 
   <body>
     <div class="container">
-      <div class ="title"><h1>Sketch Pad</h1></div>
+      <div class ="title"><h1 style='color:rgb(1, 7, 82);'>Sketch Pad</h1></div>
       <div class="content">
         <div class="grid"></div>
         <div class="buttons">
-          <button onclick="changeColor('black')">Black</button>
-          <button onclick="changeColor('blue')">Blue</button>
-          <button onclick="changeColor('random')">Random</button>
-          <button onclick="changeColor('white')">Eraser</button>
-          <button onclick="resetGrid()">Reset</button>
+          <button onclick="changeColor('black')" style='background-color: black; color:white'>Black</button>
+          <button onclick="changeColor('blue')" style='background-color: blue; color:white;'">Blue</button>
+          <button onclick="changeColor('random')" class="randomButton">Random</button>
+          <button onclick="changeColor('white')" style='background-color: pink;'>Eraser</button>
+          <button onclick="resetGrid()" >Reset</button>
         </div>
         <div>
           <input 
           type="text" 
           placeholder="Size of Grid" 
           value="16" 
-          onchange= "changeSize(this.value)"
+          onchange= "changeSize(this.value)" 
+          <!-- calls the function changeSize, this.value is whatever value user has typed into the input, this allows function to change the value user inputs-->
           />
           <button>Set Size</button>
           <div id="errorText"><h3> </h3></div>

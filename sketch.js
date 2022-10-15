@@ -1,9 +1,12 @@
+/* Declaring and assigning 2 variables to select the element 
+ that matches it's specific CSS selector */
 const container = document.querySelector('#container');
 const errorText = document.querySelector("#errorText");
 
 let color = "black";
 let click = true;
 
+//allows user to make a grid to whatever size they want
 function makeGrid(size){
   let grid = document.querySelector('.grid');
 
@@ -23,7 +26,7 @@ function makeGrid(size){
 makeGrid(16);
 
 function changeSize(input) {
-  if(input >=2 && input <=100) {
+  if(input >=2 && input <=200) {
     makeGrid(input);
   } 
   else {
@@ -40,6 +43,8 @@ function randomColor() {
   return color2;
 }
 
+/* colorBox(), changeColor() functions allow each box in grid to have color 
+when mouse is over it and change color based on whichever button user clicks */
 function colorBox() {
   if (click) {
     if(color == "random") {
@@ -54,6 +59,7 @@ function colorBox() {
 function changeColor (choice) {
   color = choice;
 }
+
 
 function resetGrid() {
   let grid = document.querySelector(".grid");
